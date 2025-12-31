@@ -18,7 +18,7 @@ module.exports = function (config) {
       suppressAll: true,
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/gestao-edificios-ng17'),
+      dir: require('path').join(__dirname, './coverage/gestao-edificios'),
       subdir: '.',
       reporters: [
         { type: 'html' },
@@ -35,3 +35,4 @@ module.exports = function (config) {
     restartOnFileChange: true,
   });
 };
+

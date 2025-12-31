@@ -13,7 +13,7 @@ npm install
 
 ## Scripts
 - `npm start` — servidor de dev em `http://localhost:4200/`
-- `npm run build` — build de produção em `dist/gestao-edificios-ng17`
+- `npm run build` — build de produção em `dist/gestao-edificios`
 - `npm test` — testes unitários (Karma + Jasmine)
 
 ## Estrutura
@@ -40,4 +40,5 @@ src/
 - `npm test` roda os testes unitários. Ajuste/adicione specs ao criar novos componentes/serviços.
 
 ## Build e publicação
-- `npm run build` gera a pasta `dist/gestao-edificios-ng17/`; sirva o conteúdo estático via o servidor de sua preferência.
+- `npm run build` gera a pasta `dist/gestao-edificios/`; sirva o conteúdo estático via o servidor de sua preferência.
+
