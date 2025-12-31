@@ -1,14 +1,16 @@
-import * as platformBrowser from '@angular/platform-browser';
+import { ApplicationRef } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { bootstrapApp } from './main';
 import { AppComponent } from './app/app.component';
 import { appConfig } from './app/app.config';
 
 describe('bootstrapApp', () => {
   it('should call bootstrapApplication with AppComponent and appConfig', async () => {
+    const appRefMock = {} as ApplicationRef;
     const bootstrapSpy = spyOn(
-      platformBrowser,
-      'bootstrapApplication'
-    ).and.returnValue(Promise.resolve(true as unknown));
+      platformBrowserDynamic(),
+      'bootstrapModule'
+    ).and.returnValue(Promise.resolve(appRefMock));
 
     await bootstrapApp();
 
@@ -17,9 +19,7 @@ describe('bootstrapApp', () => {
 
   it('should log and propagate errors from bootstrap', async () => {
     const error = new Error('bootstrap failed');
-    spyOn(platformBrowser, 'bootstrapApplication').and.returnValue(
-      Promise.reject(error)
-    );
+    spyOn(platformBrowserDynamic(), 'bootstrapModule').and.returnValue(Promise.reject(error));
     const consoleSpy = spyOn(console, 'error');
 
     await expectAsync(bootstrapApp()).toBeRejectedWith(error);
