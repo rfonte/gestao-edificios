@@ -5,6 +5,11 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    title: 'Gestao de Edificios',
+    title: 'Gestão de Edifícios',
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full',
   },
 ];

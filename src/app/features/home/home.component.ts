@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  greeting = 'Bem-vindo(a) ao gestor de edificios';
+  greeting = 'Bem-vindo(a) ao gestor de edifícios';
   description = 'Use o menu para navegar pelas funcionalidades.';
 }

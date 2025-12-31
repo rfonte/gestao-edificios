@@ -16,6 +16,7 @@ npm install
 - `npm run build` — build de producao em `dist/gestao-edificios`
 - `npm test` — testes unitarios (Karma + Jasmine)
 - `npm test -- --code-coverage` — relatorio em `coverage/gestao-edificios`
+- `npm run lint` — ESLint (Angular + TS)
 
 ## Estrutura
 ```
@@ -37,9 +38,13 @@ src/
 - Singletons globais em `src/app/core/`.
 - Recursos reaproveitaveis em `src/app/shared/`.
 - Estilos globais em `src/styles.css`; estilos de componentes via `styleUrl`.
+- Imports mais limpos com aliases: `@app/*`, `@core/*`, `@shared/*`, `@features/*`.
 
 ## Testes
 - `npm test` roda os testes unitarios. Ajuste/adicione specs ao criar novos componentes/servicos.
 
 ## Build e publicacao
 - `npm run build` gera a pasta `dist/gestao-edificios/`; sirva o conteudo estatico via o servidor de sua preferencia.
+
+## CI
+- Workflow GitHub Actions em `.github/workflows/ci.yml` executa install, lint e test em pushes/PRs para main/master.

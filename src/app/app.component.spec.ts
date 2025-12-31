@@ -20,7 +20,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Gestao de Edificios');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Gestão de Edifícios');
   });
 
   it('should include the router outlet', () => {

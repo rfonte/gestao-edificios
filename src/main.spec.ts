@@ -22,7 +22,7 @@ describe('bootstrapApp', () => {
     );
     const consoleSpy = spyOn(console, 'error');
 
-    await bootstrapApp();
+    await expectAsync(bootstrapApp()).toBeRejectedWith(error);
     expect(consoleSpy).toHaveBeenCalledWith(error);
   });
 });
