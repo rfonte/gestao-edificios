@@ -1,27 +1,43 @@
-# GestaoEdificiosNg17
+# Gestão de Edifícios
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Aplicação Angular 17 (standalone + router) para gestão de edifícios, preparada para evoluir por domínios.
 
-## Development server
+## Requisitos
+- Node 18.x ou 20.x
+- npm 9+
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Instalação
+```bash
+npm install
+```
 
-## Code scaffolding
+## Scripts
+- `npm start` — servidor de dev em `http://localhost:4200/`
+- `npm run build` — build de produção em `dist/gestao-edificios-ng17`
+- `npm test` — testes unitários (Karma + Jasmine)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Estrutura
+```
+src/
+  main.ts               # bootstrap standalone
+  app/
+    app.config.ts       # providers + provideRouter/provideHttpClient
+    app.routes.ts       # rotas raiz
+    app.component.*     # shell com <router-outlet>
+    core/               # singletons (interceptors, guards, services globais)
+    shared/             # componentes/pipes/diretivas reutilizáveis
+    features/
+      home/             # landing atual
+```
 
-## Build
+## Desenvolvimento
+- Adicione novas áreas em `src/app/features/<dominio>/`.
+- Singletons globais em `src/app/core/`.
+- Recursos reaproveitáveis em `src/app/shared/`.
+- Estilos globais em `src/styles.css`; estilos de componentes via `styleUrl`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Testes
+- `npm test` roda os testes unitários. Ajuste/adicione specs ao criar novos componentes/serviços.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Build e publicação
+- `npm run build` gera a pasta `dist/gestao-edificios-ng17/`; sirva o conteúdo estático via o servidor de sua preferência.
