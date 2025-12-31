@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+﻿import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeComponent } from './home.component';
 
 describe('HomeComponent', () => {
@@ -20,7 +20,7 @@ describe('HomeComponent', () => {
   });
 
   it('should expose greeting and description', () => {
-    expect(component.greeting).toBe('Bem-vindo(a) ao gestor de edifícios');
+    expect(component.greeting).toBe('Bem-vindo(a) ao gestor de edificios');
     expect(component.description).toBe(
       'Use o menu para navegar pelas funcionalidades.'
     );
@@ -29,7 +29,7 @@ describe('HomeComponent', () => {
   it('should render greeting and description', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h2')?.textContent).toContain(
-      'Bem-vindo(a) ao gestor de edifícios'
+      'Bem-vindo(a) ao gestor de edificios'
     );
     expect(compiled.querySelector('p')?.textContent).toContain(
       'Use o menu para navegar pelas funcionalidades.'

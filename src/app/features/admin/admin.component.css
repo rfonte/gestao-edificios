@@ -1,0 +1,16 @@
+.feature {
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.feature h2 {
+  margin: 0 0 0.5rem;
+  color: #1d3557;
+}
+
+.feature p {
+  margin: 0;
+  color: #42526e;
+}

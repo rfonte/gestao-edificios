@@ -24,8 +24,8 @@ src/
   main.ts               # bootstrap standalone
   app/
     app.config.ts       # providers + provideRouter/provideHttpClient
-    app.routes.ts       # rotas raiz
-    app.component.*     # shell com <router-outlet>
+    app.routes.ts       # rotas raiz + labels de menu
+    app.component.*     # shell com <router-outlet> e menu principal
     core/               # singletons (interceptors, guards, services globais)
     shared/             # componentes/pipes/diretivas reutilizaveis
     features/

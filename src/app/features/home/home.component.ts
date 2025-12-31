@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  greeting = 'Bem-vindo(a) ao gestor de edifícios';
+  greeting = 'Bem-vindo(a) ao gestor de edificios';
   description = 'Use o menu para navegar pelas funcionalidades.';
 }
