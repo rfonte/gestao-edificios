@@ -1,20 +1,21 @@
-# Gestão de Edifícios
+# Gestao de Edificios
 
-Aplicação Angular 17 (standalone + router) para gestão de edifícios, preparada para evoluir por domínios.
+Aplicacao Angular 17 (standalone + router) para gestao de edificios, preparada para evoluir por dominios.
 
 ## Requisitos
 - Node 18.x ou 20.x
 - npm 9+
 
-## Instalação
+## Instalacao
 ```bash
 npm install
 ```
 
 ## Scripts
 - `npm start` — servidor de dev em `http://localhost:4200/`
-- `npm run build` — build de produção em `dist/gestao-edificios`
-- `npm test` — testes unitários (Karma + Jasmine)
+- `npm run build` — build de producao em `dist/gestao-edificios`
+- `npm test` — testes unitarios (Karma + Jasmine)
+- `npm test -- --code-coverage` — relatorio em `coverage/gestao-edificios`
 
 ## Estrutura
 ```
@@ -25,20 +26,20 @@ src/
     app.routes.ts       # rotas raiz
     app.component.*     # shell com <router-outlet>
     core/               # singletons (interceptors, guards, services globais)
-    shared/             # componentes/pipes/diretivas reutilizáveis
+    shared/             # componentes/pipes/diretivas reutilizaveis
     features/
       home/             # landing atual
+  environments/         # environment.ts e environment.prod.ts
 ```
 
 ## Desenvolvimento
-- Adicione novas áreas em `src/app/features/<dominio>/`.
+- Adicione novas areas em `src/app/features/<dominio>/`.
 - Singletons globais em `src/app/core/`.
-- Recursos reaproveitáveis em `src/app/shared/`.
+- Recursos reaproveitaveis em `src/app/shared/`.
 - Estilos globais em `src/styles.css`; estilos de componentes via `styleUrl`.
 
 ## Testes
-- `npm test` roda os testes unitários. Ajuste/adicione specs ao criar novos componentes/serviços.
+- `npm test` roda os testes unitarios. Ajuste/adicione specs ao criar novos componentes/servicos.
 
-## Build e publicação
-- `npm run build` gera a pasta `dist/gestao-edificios/`; sirva o conteúdo estático via o servidor de sua preferência.
-
+## Build e publicacao
+- `npm run build` gera a pasta `dist/gestao-edificios/`; sirva o conteudo estatico via o servidor de sua preferencia.
